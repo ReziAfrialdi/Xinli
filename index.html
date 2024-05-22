@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lalezar&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="/asset/logo_xinli.png" />
+    <title>Xinli - Landing Page</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Lalezar: ["Lalezar", "sans-serif"],
+              PlusJakartaSans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              Black1: "#020014",
+              Black2: "#65636B",
+              Black3: "#0B0A2F",
+              Purple: "#762BEB",
+              White: "#FFFFFF",
+            },
+            backgroundImage: {
+              "gradien-custom":
+                "linear-gradient(to top right, rgba(225, 212, 237, 0) 0%, rgba(226, 228, 242, 1) 100%)",
+            },
+          },
+        },
+        plugins: [
+          function ({ addUtilities }) {
+            const newUtilities = {
+              ".hide-scrollbar": {
+                "-ms-overflow-style": "none",
+                "scrollbar-width": "none",
+              },
+              ".hide-scrollbar::-webkit-scrollbar": {
+                display: "none",
+              },
+            };
+            addUtilities(newUtilities, ["responsive"]);
+          },
+        ],
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Section pembungkus background linear -->
+    <section class="background-color bg-gradien-custom pt-0 pb-24">
+      <!-- Navbar -->
+      <nav
+        class="flex flex-row max-w-6xl mx-auto justify-between items-center pt-7 mb-14"
+      >
+        <div class="flex flex-row gap-x-2 items-center">
+          <a href="/" class="flex flex-row gap-x-2 items-center">
+            <svg
+              width="37"
+              height="37"
+              viewBox="0 0 37 37"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.375 10.0625C18.375 14.7224 14.5974 18.5 9.9375 18.5H1.5V10.0625C1.5 5.40259 5.27759 1.625 9.9375 1.625C14.5974 1.625 18.375 5.40259 18.375 10.0625Z"
+                fill="#762BEB"
+              />
+              <path
+                d="M18.375 26.9375C18.375 22.2776 22.1526 18.5 26.8125 18.5H35.25V26.9375C35.25 31.5974 31.4724 35.375 26.8125 35.375C22.1526 35.375 18.375 31.5974 18.375 26.9375Z"
+                fill="#762BEB"
+              />
+              <path
+                d="M1.5 26.9375C1.5 31.5974 5.27759 35.375 9.9375 35.375H18.375V26.9375C18.375 22.2776 14.5974 18.5 9.9375 18.5C5.27759 18.5 1.5 22.2776 1.5 26.9375Z"
+                fill="#762BEB"
+              />
+              <path
+                d="M35.25 10.0625C35.25 5.40259 31.4724 1.625 26.8125 1.625H18.375V10.0625C18.375 14.7224 22.1526 18.5 26.8125 18.5C31.4724 18.5 35.25 14.7224 35.25 10.0625Z"
+                fill="#762BEB"
+              />
+            </svg>
+
+            <h1 class="font-Lalezar text-3xl text-Black1">XINLI</h1>
+          </a>
+        </div>
+
+        <ul class="flex flex-row gap-x-10">
+          <li>
+            <a
+              href="#"
+              class="font-PlusJakartaSans text-base font-medium text-Black1 hover:font-semibold hover:text-[#762BEB]"
+            >
+              Features
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-PlusJakartaSans text-base font-medium text-Black1 hover:font-semibold hover:text-[#762BEB]"
+            >
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-PlusJakartaSans text-base font-medium text-Black1 hover:font-semibold hover:text-[#762BEB]"
+            >
+              Docs
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="font-PlusJakartaSans text-base font-medium text-Black1 hover:font-semibold hover:text-[#762BEB]"
+            >
+              Showcase
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex flex-row gap-x-5 items-center">
+          <a
+            href="#"
+            class="font-PlusJakartaSans text-base font-medium text-Black1 hover:font-semibold hover:text-[#762BEB]"
+          >
+            Sign in
+          </a>
+          <a
+            href="#"
+            class="font-PlusJakartaSans font-extrabold text-base text-White bg-Purple rounded-xl px-7 py-3.5 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black1"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+
+      <!-- Hero section -->
+      <section class="hero max-w-6xl mx-auto mt-14">
+        <div class="flex flex-row items-center justify-between">
+          <!-- Left section -->
+          <div class="flex flex-col gap-y-12">
+            <div class="flex flex-col gap-y-7">
+              <h1
+                class="font-PlusJakartaSans font-extrabold text-6xl text-Black1 leading-tight"
+              >
+                Explore Business<br />
+                Insights Analytics
+              </h1>
+              <p
+                class="font-PlusJakartaSans font-medium text-lg leading-9 text-Black2"
+              >
+                Make a better decision based on what your customer needs<br />
+                without compromising your business value propositions.
+              </p>
+              <div class="flex flex-row gap-x-3 items-center">
+                <img
+                  src="/asset/people.png"
+                  alt=""
+                  class="w-[100px] h-[40px]"
+                />
+                <p
+                  class="font-PlusJakartaSans font-semibold text-base text-Black2"
+                >
+                  Join 28K global founders
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-x-4">
+              <a
+                href="#"
+                class="font-PlusJakartaSans font-extrabold text-base text-White bg-Purple rounded-xl px-7 py-3.5 border border-t border-r-4 border-b-4 border-l border-Black1"
+                >Try Free Trial</a
+              >
+              <a
+                href="#"
+                class="font-PlusJakartaSans font-extrabold text-base text-Black1 bg-White rounded-xl px-7 py-3.5 border border-t border-r-4 border-b-4 border-l border-Black1"
+                >Call Sales</a
+              >
+            </div>
+          </div>
+          <!-- Right section -->
+          <svg
+            width="500"
+            height="530"
+            viewBox="0 0 500 530"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask id="path-1-inside-1_0_248" fill="white">
+              <path
+                d="M0 50C0 22.3858 22.3858 0 50 0H450C477.614 0 500 22.3858 500 50V480C500 507.614 477.614 530 450 530H50C22.3858 530 0 507.614 0 480V50Z"
+              />
+            </mask>
+            <path
+              d="M0 50C0 22.3858 22.3858 0 50 0H450C477.614 0 500 22.3858 500 50V480C500 507.614 477.614 530 450 530H50C22.3858 530 0 507.614 0 480V50Z"
+              fill="white"
+            />
+            <path
+              d="M-1 50C-1 21.8335 21.8335 -1 50 -1H455C483.167 -1 506 21.8335 506 50H494C494 22.938 474.301 1 450 1H50C22.938 1 1 22.938 1 50H-1ZM506 480C506 510.928 480.928 536 450 536H50C21.8335 536 -1 513.167 -1 485L1 480C1 504.301 22.938 524 50 524H450C474.301 524 494 504.301 494 480H506ZM50 536C21.8335 536 -1 513.167 -1 485V50C-1 21.8335 21.8335 -1 50 -1V1C22.938 1 1 22.938 1 50V480C1 504.301 22.938 524 50 524V536ZM455 -1C483.167 -1 506 21.8335 506 50V480C506 510.928 480.928 536 450 536V524C474.301 524 494 504.301 494 480V50C494 22.938 474.301 1 450 1L455 -1Z"
+              fill="#020014"
+              mask="url(#path-1-inside-1_0_248)"
+            />
+          </svg>
+        </div>
+      </section>
+    </section>
+
+    <!-- Brands section -->
+    <section class="brands mx-auto mt-10">
+      <h2
+        class="font-PlusJakartaSans font-extrabold text-[46px] text-Black3 text-center pt-[70px]"
+      >
+        All Integrations Available
+      </h2>
+      <!-- Brands 1 -->
+      <div class="overflow-x-auto w-full hide-scrollbar mt-7">
+        <div class="flex flex-row gap-x-10 w-max">
+          <!-- Figma icon -->
+          <div
+            class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+          >
+            <img src="/asset/Figma.png" alt="Figma logo" class="h-[50px]" />
+            <!-- Text title & desc -->
+            <div class="flex flex-col gap-y-1">
+              <h3
+                class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+              >
+                Figma
+              </h3>
+              <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+                Design Software
+              </p>
+            </div>
+          </div>
+
+          <!-- Whimsical icon -->
+          <div
+            class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+          >
+            <img
+              src="/asset/Whimsical.png"
+              alt="Whimsical logo"
+              class="h-[50px]"
+            />
+            <!-- Text title & desc -->
+            <div class="flex flex-col gap-y-1">
+              <h3
+                class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+              >
+                Whimsical
+              </h3>
+              <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+                Design Software
+              </p>
+            </div>
+          </div>
+
+          <!-- Trello icon -->
+          <div
+            class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+          >
+            <img src="/asset/Trello.png" alt="Trello logo" class="h-[50px]" />
+            <!-- Text title & desc -->
+            <div class="flex flex-col gap-y-1">
+              <h3
+                class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+              >
+                Trello
+              </h3>
+              <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+                Design Software
+              </p>
+            </div>
+          </div>
+
+          <!-- InVision icon -->
+          <div
+            class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+          >
+            <img
+              src="/asset/InVision.png"
+              alt="InVision logo"
+              class="h-[50px]"
+            />
+            <!-- Text title & desc -->
+            <div class="flex flex-col gap-y-1">
+              <h3
+                class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+              >
+                InVision
+              </h3>
+              <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+                Design Software
+              </p>
+            </div>
+          </div>
+
+          <!-- Jira icon -->
+          <div
+            class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+          >
+            <img src="/asset/Jira.png" alt="Jira logo" class="h-[50px]" />
+            <!-- Text title & desc -->
+            <div class="flex flex-col gap-y-1">
+              <h3
+                class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+              >
+                Jira
+              </h3>
+              <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+                Design Software
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brands 2 -->
+      <div class="flex flex-row gap-x-10 mt-7 pb-[70px] justify-center">
+        <!-- Miro icon -->
+        <div
+          class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+        >
+          <img src="/asset/Miro.png" alt="" class="h-[50px]" />
+          <!-- Text title & desc -->
+          <div class="flex flex-col gap-y-1">
+            <h3
+              class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+            >
+              Miro
+            </h3>
+            <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+              Design Software
+            </p>
+          </div>
+        </div>
+
+        <!-- Webflow icon -->
+        <div
+          class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+        >
+          <img src="/asset/Webflow.png" alt="" class="h-[50px]" />
+          <!-- Text title & desc -->
+          <div class="flex flex-col gap-y-1">
+            <h3
+              class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+            >
+              Webflow
+            </h3>
+            <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+              Design Software
+            </p>
+          </div>
+        </div>
+
+        <!-- Elementor icon -->
+        <div
+          class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+        >
+          <img src="/asset/Elementor.png" alt="" class="h-[50px]" />
+          <!-- Text title & desc -->
+          <div class="flex flex-col gap-y-1">
+            <h3
+              class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+            >
+              Elementor
+            </h3>
+            <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+              Design Software
+            </p>
+          </div>
+        </div>
+
+        <!-- Firebase icon -->
+        <div
+          class="flex flex-row gap-x-3 items-center rounded-2xl px-5 py-3 border border-t-1 border-r-4 border-b-4 border-l-1 border-Black3"
+        >
+          <img src="/asset/Firebase.png" alt="" class="h-[50px]" />
+          <!-- Text title & desc -->
+          <div class="flex flex-col gap-y-1">
+            <h3
+              class="font-PlusJakartaSans font-extrabold text-[22px] text-Black3"
+            >
+              Firebase
+            </h3>
+            <p class="font-PlusJakartaSans font-medium text-lg text-Black2">
+              Design Software
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="feature max-w-6xl mx-auto mt-10 py-[70px]">
+      <div class="flex flex-row items-center justify-between">
+        <!-- Left section -->
+        <div class="relative">
+          <!-- background linear gradient 1 / top right -->
+          <div class="absolute top-[-132px] right-[-202px]">
+            <svg width="648" height="568" viewBox="0 0 648 568" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_f_65_99)">
+              <ellipse cx="324.293" cy="253.664" rx="183.5" ry="152.334" transform="rotate(35.9359 324.293 253.664)" fill="#EDD8EF"/>
+              </g>
+              <defs>
+              <filter id="filter0_f_65_99" x="0.867554" y="-60.0784" width="646.851" height="627.484" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_65_99"/>
+              </filter>
+              </defs>
+              </svg>               
+          </div>
+
+          <!-- background linear gradient 2 / bottom left-->
+          <div class="absolute bottom-[-160px] left-[-90px]">
+            <svg width="625" height="545" viewBox="0 0 625 545" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_f_65_100)">
+              <ellipse cx="300.977" cy="314.034" rx="183.5" ry="152.334" transform="rotate(35.9359 300.977 314.034)" fill="#DAD8EF"/>
+              </g>
+              <defs>
+              <filter id="filter0_f_65_100" x="-22.4481" y="0.291626" width="646.851" height="627.484" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_65_100"/>
+              </filter>
+              </defs>
+              </svg>                         
+          </div>
+
+          <!-- frame -->
+          <div class="relative z-10">
+            <svg
+              width="505"
+              height="591"
+              viewBox="0 0 505 591"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask id="path-1-inside-1_0_309" fill="white">
+                <path
+                  d="M0 145.5C0 117.886 22.3858 95.5 50 95.5H189C216.614 95.5 239 117.886 239 145.5V325.5C239 353.114 216.614 375.5 189 375.5H50C22.3858 375.5 0 353.114 0 325.5V145.5Z"
+                />
+              </mask>
+              <path
+                d="M0 145.5C0 117.886 22.3858 95.5 50 95.5H189C216.614 95.5 239 117.886 239 145.5V325.5C239 353.114 216.614 375.5 189 375.5H50C22.3858 375.5 0 353.114 0 325.5V145.5Z"
+                fill="white"
+              />
+              <path
+                d="M-1 145.5C-1 117.333 21.8335 94.5 50 94.5H194C222.167 94.5 245 117.333 245 145.5H233C233 118.438 213.301 96.5 189 96.5H50C22.938 96.5 1 118.438 1 145.5H-1ZM245 325.5C245 356.428 219.928 381.5 189 381.5H50C21.8335 381.5 -1 358.667 -1 330.5L1 325.5C1 349.801 22.938 369.5 50 369.5H189C213.301 369.5 233 349.801 233 325.5H245ZM50 381.5C21.8335 381.5 -1 358.667 -1 330.5V145.5C-1 117.333 21.8335 94.5 50 94.5V96.5C22.938 96.5 1 118.438 1 145.5V325.5C1 349.801 22.938 369.5 50 369.5V381.5ZM194 94.5C222.167 94.5 245 117.333 245 145.5V325.5C245 356.428 219.928 381.5 189 381.5V369.5C213.301 369.5 233 349.801 233 325.5V145.5C233 118.438 213.301 96.5 189 96.5L194 94.5Z"
+                fill="#0B0A2F"
+                mask="url(#path-1-inside-1_0_309)"
+              />
+              <mask id="path-3-inside-2_0_309" fill="white">
+                <path
+                  d="M166 50C166 22.3858 188.386 0 216 0H355C382.614 0 405 22.3858 405 50V230C405 257.614 382.614 280 355 280H216C188.386 280 166 257.614 166 230V50Z"
+                />
+              </mask>
+              <path
+                d="M166 50C166 22.3858 188.386 0 216 0H355C382.614 0 405 22.3858 405 50V230C405 257.614 382.614 280 355 280H216C188.386 280 166 257.614 166 230V50Z"
+                fill="white"
+              />
+              <path
+                d="M165 50C165 21.8335 187.833 -1 216 -1H360C388.167 -1 411 21.8335 411 50H399C399 22.938 379.301 1 355 1H216C188.938 1 167 22.938 167 50H165ZM411 230C411 260.928 385.928 286 355 286H216C187.833 286 165 263.167 165 235L167 230C167 254.301 188.938 274 216 274H355C379.301 274 399 254.301 399 230H411ZM216 286C187.833 286 165 263.167 165 235V50C165 21.8335 187.833 -1 216 -1V1C188.938 1 167 22.938 167 50V230C167 254.301 188.938 274 216 274V286ZM360 -1C388.167 -1 411 21.8335 411 50V230C411 260.928 385.928 286 355 286V274C379.301 274 399 254.301 399 230V50C399 22.938 379.301 1 355 1L360 -1Z"
+                fill="#0B0A2F"
+                mask="url(#path-3-inside-2_0_309)"
+              />
+              <mask id="path-5-inside-3_0_309" fill="white">
+                <path
+                  d="M166 360.25C166 332.636 188.386 310.25 216 310.25H355C382.614 310.25 405 332.636 405 360.25V540.25C405 567.864 382.614 590.25 355 590.25H216C188.386 590.25 166 567.864 166 540.25V360.25Z"
+                />
+              </mask>
+              <path
+                d="M166 360.25C166 332.636 188.386 310.25 216 310.25H355C382.614 310.25 405 332.636 405 360.25V540.25C405 567.864 382.614 590.25 355 590.25H216C188.386 590.25 166 567.864 166 540.25V360.25Z"
+                fill="white"
+              />
+              <path
+                d="M165 360.25C165 332.083 187.833 309.25 216 309.25H360C388.167 309.25 411 332.083 411 360.25H399C399 333.188 379.301 311.25 355 311.25H216C188.938 311.25 167 333.188 167 360.25H165ZM411 540.25C411 571.178 385.928 596.25 355 596.25H216C187.833 596.25 165 573.417 165 545.25L167 540.25C167 564.551 188.938 584.25 216 584.25H355C379.301 584.25 399 564.551 399 540.25H411ZM216 596.25C187.833 596.25 165 573.417 165 545.25V360.25C165 332.083 187.833 309.25 216 309.25V311.25C188.938 311.25 167 333.188 167 360.25V540.25C167 564.551 188.938 584.25 216 584.25V596.25ZM360 309.25C388.167 309.25 411 332.083 411 360.25V540.25C411 571.178 385.928 596.25 355 596.25V584.25C379.301 584.25 399 564.551 399 540.25V360.25C399 333.188 379.301 311.25 355 311.25L360 309.25Z"
+                fill="#0B0A2F"
+                mask="url(#path-5-inside-3_0_309)"
+              />
+              <mask id="path-7-inside-4_0_309" fill="white">
+                <path
+                  d="M266 239C266 211.386 288.386 189 316 189H455C482.614 189 505 211.386 505 239V419C505 446.614 482.614 469 455 469H316C288.386 469 266 446.614 266 419V239Z"
+                />
+              </mask>
+              <path
+                d="M266 239C266 211.386 288.386 189 316 189H455C482.614 189 505 211.386 505 239V419C505 446.614 482.614 469 455 469H316C288.386 469 266 446.614 266 419V239Z"
+                fill="white"
+              />
+              <path
+                d="M265 239C265 210.833 287.833 188 316 188H460C488.167 188 511 210.833 511 239H499C499 211.938 479.301 190 455 190H316C288.938 190 267 211.938 267 239H265ZM511 419C511 449.928 485.928 475 455 475H316C287.833 475 265 452.167 265 424L267 419C267 443.301 288.938 463 316 463H455C479.301 463 499 443.301 499 419H511ZM316 475C287.833 475 265 452.167 265 424V239C265 210.833 287.833 188 316 188V190C288.938 190 267 211.938 267 239V419C267 443.301 288.938 463 316 463V475ZM460 188C488.167 188 511 210.833 511 239V419C511 449.928 485.928 475 455 475V463C479.301 463 499 443.301 499 419V239C499 211.938 479.301 190 455 190L460 188Z"
+                fill="#0B0A2F"
+                mask="url(#path-7-inside-4_0_309)"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="flex flex-col gap-y-12">
+          <div class="flex flex-col gap-y-7">
+            <h2
+              class="font-PlusJakartaSans font-extrabold text-[46px] text-Black3"
+            >
+              AI-Powered System
+            </h2>
+            <p
+              class="font-PlusJakartaSans font-medium text-lg leading-9 text-Black2"
+            >
+              Make a better decision based on what your customer needs <br />
+              without compromising your business value propositions.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-y-10">
+            <div class="flex flex-row gap-x-4">
+              <svg
+                width="80"
+                height="81"
+                viewBox="0 0 80 81"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect y="0.625" width="80" height="80" rx="40" fill="#0B0A2F" />
+                <path
+                  opacity="0.6"
+                  d="M36.85 27.2917C36.7166 27.7917 36.6667 28.3417 36.6667 28.9583V33.9583H28.3333V30.625C28.3333 28.7917 29.8333 27.2917 31.6667 27.2917H36.85Z"
+                  fill="white"
+                />
+                <path
+                  d="M36.6667 52.2917V33.9583H28.3333C25 33.9583 23.3333 35.625 23.3333 38.9583V52.2917C23.3333 55.625 25 57.2917 28.3333 57.2917H41.6667C38.3333 57.2917 36.6667 55.625 36.6667 52.2917ZM31.25 48.9583C31.25 49.6417 30.6833 50.2083 30 50.2083C29.3167 50.2083 28.75 49.6417 28.75 48.9583V42.2917C28.75 41.6083 29.3167 41.0417 30 41.0417C30.6833 41.0417 31.25 41.6083 31.25 42.2917V48.9583Z"
+                  fill="white"
+                />
+                <path
+                  opacity="0.4"
+                  d="M43.3333 57.2917H41.6667C38.3333 57.2917 36.6667 55.625 36.6667 52.2917V28.9583C36.6667 25.625 38.3333 23.9583 41.6667 23.9583H51.6667C55 23.9583 56.6667 25.625 56.6667 28.9583V52.2917C56.6667 55.625 55 57.2917 51.6667 57.2917H50"
+                  fill="white"
+                />
+                <path
+                  d="M50 50.625V57.2917H43.3333V50.625C43.3333 49.7083 44.0833 48.9583 45 48.9583H48.3333C49.25 48.9583 50 49.7083 50 50.625Z"
+                  fill="white"
+                />
+                <path
+                  d="M43.3333 43.5417C42.65 43.5417 42.0833 42.975 42.0833 42.2917V33.9583C42.0833 33.275 42.65 32.7083 43.3333 32.7083C44.0167 32.7083 44.5833 33.275 44.5833 33.9583V42.2917C44.5833 42.975 44.0167 43.5417 43.3333 43.5417Z"
+                  fill="white"
+                />
+                <path
+                  d="M50 43.5417C49.3167 43.5417 48.75 42.975 48.75 42.2917V33.9583C48.75 33.275 49.3167 32.7083 50 32.7083C50.6833 32.7083 51.25 33.275 51.25 33.9583V42.2917C51.25 42.975 50.6833 43.5417 50 43.5417Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="flex flex-col gap-y-3">
+                <h4
+                  class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+                >
+                  Digital Marketing
+                </h4>
+                <p
+                  class="font-PlusJakartaSans font-medium text-lg leading-[30px] text-Black2"
+                >
+                  Make a better decision based on what your<br />
+                  customer needs without compromising.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-x-4">
+              <svg
+                width="80"
+                height="81"
+                viewBox="0 0 80 81"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect y="0.625" width="80" height="80" rx="40" fill="#0B0A2F" />
+                <path
+                  opacity="0.4"
+                  d="M56.6667 33.6417V36.475C56.6667 37.7583 55.3 38.525 54.1667 37.925C51.7167 36.6083 48.7667 36.0917 45.6667 36.7417C43.6667 37.1583 41.8167 38.0917 40.3 39.375C39.4333 40.0917 38.6667 40.9417 38.0167 41.875C37.1167 43.1917 36.45 44.6917 36.1167 46.2917C35.4667 49.3917 35.9833 52.3417 37.3 54.7917C37.9 55.925 37.1334 57.2917 35.85 57.2917H33.0167C27.6667 57.2917 23.3333 52.9583 23.3333 47.6083V33.6417C23.3333 28.2917 27.6667 23.9583 33.0167 23.9583H46.9833C52.3333 23.9583 56.6667 28.2917 56.6667 33.6417Z"
+                  fill="white"
+                />
+                <path
+                  d="M40.3 39.375C39.4333 40.0917 38.6667 40.9417 38.0167 41.875H23.3333V39.375H40.3Z"
+                  fill="white"
+                />
+                <path
+                  d="M30 35.625C29.3167 35.625 28.75 35.0583 28.75 34.375V31.0417C28.75 30.3583 29.3167 29.7917 30 29.7917C30.6833 29.7917 31.25 30.3583 31.25 31.0417V34.375C31.25 35.0583 30.6833 35.625 30 35.625Z"
+                  fill="white"
+                />
+                <path
+                  d="M36.6667 35.625C35.9833 35.625 35.4167 35.0583 35.4167 34.375V31.0417C35.4167 30.3583 35.9833 29.7917 36.6667 29.7917C37.35 29.7917 37.9167 30.3583 37.9167 31.0417V34.375C37.9167 35.0583 37.35 35.625 36.6667 35.625Z"
+                  fill="white"
+                />
+                <path
+                  d="M30 51.875C29.3167 51.875 28.75 51.3083 28.75 50.625V47.2917C28.75 46.6083 29.3167 46.0417 30 46.0417C30.6833 46.0417 31.25 46.6083 31.25 47.2917V50.625C31.25 51.3083 30.6833 51.875 30 51.875Z"
+                  fill="white"
+                />
+                <path
+                  d="M50 33.9583H43.3333C42.65 33.9583 42.0833 33.3917 42.0833 32.7083C42.0833 32.025 42.65 31.4583 43.3333 31.4583H50C50.6833 31.4583 51.25 32.025 51.25 32.7083C51.25 33.3917 50.6833 33.9583 50 33.9583Z"
+                  fill="white"
+                />
+                <path
+                  d="M48.3333 38.9583C42.8167 38.9583 38.3333 43.4417 38.3333 48.9583C38.3333 54.475 42.8167 58.9583 48.3333 58.9583C53.85 58.9583 58.3333 54.475 58.3333 48.9583C58.3333 43.4417 53.85 38.9583 48.3333 38.9583ZM53.2167 50.9583C52.95 51.6083 52.5667 52.1917 52.0667 52.6917C51.0667 53.6917 49.75 54.2417 48.3333 54.2417C47.2 54.2417 46.1334 53.875 45.2334 53.2083V53.4417C45.2334 53.9583 44.8167 54.3917 44.2833 54.3917C43.7667 54.3917 43.3333 53.975 43.3333 53.4417V51.0417C43.3333 50.525 43.75 50.0917 44.2833 50.0917H46.6834C47.2 50.0917 47.6333 50.5083 47.6333 51.0417C47.6333 51.525 47.2833 51.8917 46.8167 51.9583C48.0833 52.575 49.7 52.375 50.7167 51.3583C51.0333 51.0417 51.2833 50.6583 51.45 50.2417C51.65 49.7583 52.2 49.525 52.6833 49.725C53.1833 49.9083 53.4167 50.475 53.2167 50.9583ZM53.3333 46.8917C53.3333 47.4083 52.9167 47.8417 52.3833 47.8417H49.9833C49.4667 47.8417 49.0334 47.425 49.0334 46.8917C49.0334 46.4083 49.3833 46.0417 49.85 45.975C48.5833 45.3583 46.9667 45.5583 45.9333 46.575C45.65 46.8583 45.4333 47.175 45.2667 47.525C45.1 47.875 44.7667 48.075 44.4167 48.075C44.2833 48.075 44.15 48.0417 44.0167 47.9917C43.55 47.775 43.3334 47.2083 43.5667 46.725C43.8334 46.175 44.1834 45.675 44.6 45.2417C45.6 44.2417 46.9167 43.6917 48.3333 43.6917C49.4667 43.6917 50.5333 44.0583 51.4333 44.725V44.5083C51.4333 43.9917 51.85 43.5583 52.3833 43.5583C52.9167 43.5583 53.3333 43.9583 53.3333 44.4917V46.8917Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="flex flex-col gap-y-3">
+                <h4
+                  class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+                >
+                  Digital Marketing
+                </h4>
+                <p
+                  class="font-PlusJakartaSans font-medium text-lg leading-[30px] text-Black2"
+                >
+                  Make a better decision based on what your<br />
+                  customer needs without compromising.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-x-4">
+              <svg
+                width="80"
+                height="81"
+                viewBox="0 0 80 81"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect y="0.625" width="80" height="80" rx="40" fill="#0B0A2F" />
+                <path
+                  opacity="0.4"
+                  d="M37.4833 24.3417L29.1667 27.4583C27.25 28.175 25.6833 30.4417 25.6833 32.4917V44.875C25.6833 46.8417 26.9834 49.425 28.5667 50.6083L35.7333 55.9583C38.0833 57.725 41.95 57.725 44.3 55.9583L51.4667 50.6083C53.05 49.425 54.35 46.8417 54.35 44.875V32.4917C54.35 30.4417 52.7833 28.175 50.8666 27.4583L42.55 24.3417C41.1333 23.825 38.8667 23.825 37.4833 24.3417Z"
+                  fill="white"
+                />
+                <path
+                  d="M39.8333 39.4583C39.8667 39.4583 39.9 39.4583 39.9333 39.4583H39.9667H40C41.9167 39.3917 43.4167 37.8417 43.4333 35.9083C43.4333 33.9417 41.8334 32.3417 39.8667 32.3417C37.9 32.3417 36.3 33.9417 36.3 35.9083C36.3333 37.825 37.8333 39.3917 39.8333 39.4583Z"
+                  fill="white"
+                />
+                <path
+                  d="M43.65 42.975C41.6333 41.6417 38.3666 41.6417 36.3333 42.975C35.4 43.6083 34.85 44.5083 34.85 45.4417C34.85 46.3917 35.3833 47.2583 36.3333 47.8917C37.35 48.5583 38.6667 48.9083 39.9833 48.9083C41.3 48.9083 42.6333 48.575 43.6333 47.8917C44.5667 47.2583 45.1167 46.3583 45.1167 45.425C45.1333 44.475 44.6 43.6083 43.65 42.975Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="flex flex-col gap-y-3">
+                <h4
+                  class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+                >
+                  Digital Marketing
+                </h4>
+                <p
+                  class="font-PlusJakartaSans font-medium text-lg leading-[30px] text-Black2"
+                >
+                  Make a better decision based on what your<br />
+                  customer needs without compromising.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits section -->
+    <section class="benefits max-w-6xl mx-auto py-[70px]">
+      <div class="flex flex-col gap-y-12">
+        <!-- title & desc -->
+        <div class="flex flex-col gap-y-5 items-center">
+          <h2
+            class="font-PlusJakartaSans font-extrabold text-[46px] text-Black3"
+          >
+            Built For Business
+          </h2>
+          <p
+            class="font-PlusJakartaSans font-medium text-lg leading-9 text-Black2 text-center"
+          >
+            Make a better decision based on what your customer needs<br />
+            without compromising your business value propositions.
+          </p>
+        </div>
+
+        <!-- Grid for card -->
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="card-1 flex flex-col gap-y-7">
+            <svg
+              width="239"
+              height="280"
+              viewBox="0 0 239 280"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask id="path-1-inside-1_0_343" fill="white">
+                <path
+                  d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                />
+              </mask>
+              <path
+                d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                fill="white"
+              />
+              <path
+                d="M-1 50C-1 21.8335 21.8335 -1 50 -1H194C222.167 -1 245 21.8335 245 50H233C233 22.938 213.301 1 189 1H50C22.938 1 1 22.938 1 50H-1ZM245 230C245 260.928 219.928 286 189 286H50C21.8335 286 -1 263.167 -1 235L1 230C1 254.301 22.938 274 50 274H189C213.301 274 233 254.301 233 230H245ZM50 286C21.8335 286 -1 263.167 -1 235V50C-1 21.8335 21.8335 -1 50 -1V1C22.938 1 1 22.938 1 50V230C1 254.301 22.938 274 50 274V286ZM194 -1C222.167 -1 245 21.8335 245 50V230C245 260.928 219.928 286 189 286V274C213.301 274 233 254.301 233 230V50C233 22.938 213.301 1 189 1L194 -1Z"
+                fill="#0B0A2F"
+                mask="url(#path-1-inside-1_0_343)"
+              />
+            </svg>
+            <!-- Benefits title 1 -->
+            <div class="flex flex-col gap-y-5">
+              <h4
+                class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+              >
+                Digital Marketing
+              </h4>
+              <!-- Benefits list 1 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 2 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 3 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card-2 flex flex-col gap-y-7">
+            <svg
+              width="239"
+              height="280"
+              viewBox="0 0 239 280"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask id="path-1-inside-1_0_343" fill="white">
+                <path
+                  d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                />
+              </mask>
+              <path
+                d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                fill="white"
+              />
+              <path
+                d="M-1 50C-1 21.8335 21.8335 -1 50 -1H194C222.167 -1 245 21.8335 245 50H233C233 22.938 213.301 1 189 1H50C22.938 1 1 22.938 1 50H-1ZM245 230C245 260.928 219.928 286 189 286H50C21.8335 286 -1 263.167 -1 235L1 230C1 254.301 22.938 274 50 274H189C213.301 274 233 254.301 233 230H245ZM50 286C21.8335 286 -1 263.167 -1 235V50C-1 21.8335 21.8335 -1 50 -1V1C22.938 1 1 22.938 1 50V230C1 254.301 22.938 274 50 274V286ZM194 -1C222.167 -1 245 21.8335 245 50V230C245 260.928 219.928 286 189 286V274C213.301 274 233 254.301 233 230V50C233 22.938 213.301 1 189 1L194 -1Z"
+                fill="#0B0A2F"
+                mask="url(#path-1-inside-1_0_343)"
+              />
+            </svg>
+            <!-- Benefits title 1 -->
+            <div class="flex flex-col gap-y-5">
+              <h4
+                class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+              >
+                Digital Marketing
+              </h4>
+              <!-- Benefits list 1 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 2 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 3 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card-3 flex flex-col gap-y-7">
+            <svg
+              width="239"
+              height="280"
+              viewBox="0 0 239 280"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask id="path-1-inside-1_0_343" fill="white">
+                <path
+                  d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                />
+              </mask>
+              <path
+                d="M0 50C0 22.3858 22.3858 0 50 0H189C216.614 0 239 22.3858 239 50V230C239 257.614 216.614 280 189 280H50C22.3858 280 0 257.614 0 230V50Z"
+                fill="white"
+              />
+              <path
+                d="M-1 50C-1 21.8335 21.8335 -1 50 -1H194C222.167 -1 245 21.8335 245 50H233C233 22.938 213.301 1 189 1H50C22.938 1 1 22.938 1 50H-1ZM245 230C245 260.928 219.928 286 189 286H50C21.8335 286 -1 263.167 -1 235L1 230C1 254.301 22.938 274 50 274H189C213.301 274 233 254.301 233 230H245ZM50 286C21.8335 286 -1 263.167 -1 235V50C-1 21.8335 21.8335 -1 50 -1V1C22.938 1 1 22.938 1 50V230C1 254.301 22.938 274 50 274V286ZM194 -1C222.167 -1 245 21.8335 245 50V230C245 260.928 219.928 286 189 286V274C213.301 274 233 254.301 233 230V50C233 22.938 213.301 1 189 1L194 -1Z"
+                fill="#0B0A2F"
+                mask="url(#path-1-inside-1_0_343)"
+              />
+            </svg>
+            <!-- Benefits title 1 -->
+            <div class="flex flex-col gap-y-5">
+              <h4
+                class="font-PlusJakartaSans font-extrabold text-xl text-Black3"
+              >
+                Digital Marketing
+              </h4>
+              <!-- Benefits list 1 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 2 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+
+              <!-- Benefits list 3 -->
+              <div class="flex flex-row gap-x-1 items-center">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
+                    fill="#0B0A2F"
+                  />
+                  <path
+                    d="M13.225 19.475C12.975 19.475 12.7375 19.375 12.5625 19.2L9.02499 15.6625C8.66249 15.3 8.66249 14.7 9.02499 14.3375C9.38749 13.975 9.98749 13.975 10.35 14.3375L13.225 17.2125L19.65 10.7875C20.0125 10.425 20.6125 10.425 20.975 10.7875C21.3375 11.15 21.3375 11.75 20.975 12.1125L13.8875 19.2C13.7125 19.375 13.475 19.475 13.225 19.475Z"
+                    fill="white"
+                  />
+                </svg>
+                <p
+                  class="font-PlusJakartaSans font-semibold text-lg text-Black3"
+                >
+                  Remarkable charts manage
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
